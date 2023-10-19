@@ -9,7 +9,6 @@ export const metadata: Metadata = {
   title: "Task Board",
   description: "Created by Kuze",
 };
-
 export default function RootLayout({
   children,
 }: {
@@ -17,6 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/icon.png" sizes="any" />
+      </head>
       <body className={inter.className}>
         <Providers>
           <div className="my-20">{children}</div>
