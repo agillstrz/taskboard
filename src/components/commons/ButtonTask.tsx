@@ -13,7 +13,7 @@ export default function ButtonTask({ onClick, show }: buttonProps) {
     >
       <span
         className={`text-xl transition-all duration-300 ease-in ${
-          show && "rotate-45"
+          show && "rotate-90"
         }`}
       >
         <TiPlus />

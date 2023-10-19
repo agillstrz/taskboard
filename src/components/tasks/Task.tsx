@@ -9,7 +9,6 @@ export default function Task({ name, task }: { name: string; task: number }) {
   const todos = useAppSelector((state) => state.task);
   const [show, setShow] = useState<boolean>(false);
   const count = todos.filter((todo) => todo.task == task).length;
-  console.log(todos.filter((todo) => todo.task == 1));
   const colors =
     task === 1
       ? "bg-black"
@@ -29,10 +28,10 @@ export default function Task({ name, task }: { name: string; task: number }) {
             {count}
           </span>
         </div>
-        {task == 1 && <ButtonTask show={show} onClick={() => setShow(!show)} />}
+        {<ButtonTask show={show} onClick={() => setShow(!show)} />}
       </div>
 
-      {task == 1 && <FormTask show={show} setShow={setShow} task={task} />}
+      {<FormTask show={show} setShow={setShow} task={task} />}
 
       {count == 0 && (
         <div className="flex flex-col p-2 border rounded-lg items-center">
