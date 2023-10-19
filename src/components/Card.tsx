@@ -43,7 +43,7 @@ export default function Card(data: taskProps) {
       animate={{ opacity: 1, y: 0, zIndex: 0 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
       exit={{ y: 100, opacity: 0, zIndex: -5 }}
-      className="flex flex-col gap-1 border p-2 shadow-md bg-abu rounded-lg "
+      className="flex flex-col gap-1 border p-2 shadow-md overflow-auto bg-abu rounded-lg "
     >
       <div className="flex justify-between">
         <div className="flex items-center gap-x-1">
@@ -71,7 +71,7 @@ export default function Card(data: taskProps) {
         {data?.title}
       </h1>
       <p
-        className={`text-[14px] text-zinc-600 font-medium ${
+        className={`text-[14px] text-zinc-600   font-medium ${
           data.task == 4 && "line-through"
         }`}
       >
